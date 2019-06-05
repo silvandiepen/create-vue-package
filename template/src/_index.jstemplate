@@ -5,7 +5,7 @@ import <%= name %> from './<%= name %>.vue';
 export function install(Vue) {
 	if (install.installed) return;
 	install.installed = true;
-	
+
 	<% if (package_type === 'component') { %>
 	Vue.component('<%= name %>', <%= name %>);
 	<% } else { %>

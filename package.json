@@ -12,7 +12,7 @@
     "lint": "standard",
     "prepublishOnly": "npm run build",
     "build": "bili",
-    "try": "rm -rf test && node cli.js test"
+    "try": "rm -rf test && node bin/cli.js test"
   },
   "repository": {
     "url": "silvandiepen/create-vue-package",
@@ -21,9 +21,7 @@
   "author": "silvandiepen<me@silvandiepen.com>",
   "license": "MIT",
   "dependencies": {
-    "minimist": "^1.2.0",
-    "sao": "^0.22.17",
-    "superb": "^3.0.0"
+    "sao": "^1.6.1"
   },
   "devDependencies": {
     "prettier": "^1.15.2",
@@ -42,14 +40,13 @@
     }
   },
   "lint-staged": {
-    "*.js": [
+    "*.js, !template/**": [
       "standard --fix",
       "git add"
     ],
     "*.{json,md}": [
       "prettier --write",
       "git add"
-    ], 
-    "ignore": ["template/**/*.js"]
+    ]
   }
 }
