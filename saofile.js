@@ -2,18 +2,20 @@ module.exports = {
   prompts() {
     return [
       {
-        name: 'name',
+        name: 'package_name',
         message: 'Package name',
         default: this.outFolder,
-        filter: val => val.toLowerCase()
+        filter: val => val.toLowerCase(),
+        store: true
       },
       {
-        name: 'description',
+        name: 'package_description',
         message: 'Package description',
-        default: 'Vue Package'
+        default: 'Vue Package',
+        store: true
       },
       {
-        name: 'author',
+        name: 'package_author',
         message: 'Author name',
         default: this.gitUser.username || this.gitUser.name,
         store: true

@@ -1,5 +1,5 @@
 // Import vue component
-import <%= name %> from './<%= name %>.vue';
+import <%= package_name %> from './<%= package_name %>.vue';
 
 // install function executed by Vue.use()
 export function install(Vue) {
@@ -7,9 +7,9 @@ export function install(Vue) {
 	install.installed = true;
 
 	<% if (package_type === 'component') { %>
-	Vue.component('<%= name %>', <%= name %>);
+	Vue.component('<%= package_name %>', <%= package_name %>);
 	<% } else { %>
-	Vue.directive('<%= name %>', <%= name %>);
+	Vue.directive('<%= package_name %>', <%= package_name %>);
 	<% } %>
 }
 
@@ -30,7 +30,7 @@ if (GlobalVue) {
 }
 
 // To allow use as module (npm/webpack/etc.) export component
-export default { row, column };
+export default <%= package_name %>;
 
 // It's possible to expose named exports when writing components that can
 // also be used as directives, etc. - eg. import { RollupDemoDirective } from 'rollup-demo';

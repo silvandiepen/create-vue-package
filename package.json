@@ -15,7 +15,7 @@
     "lint": "standard",
     "prepublishOnly": "npm run build",
     "build": "bili",
-    "try": "rm -rf test && node bin/cli.js test"
+    "try": "rm -rf test && node cli.js test"
   },
   "repository": {
     "url": "silvandiepen/create-vue-package",
