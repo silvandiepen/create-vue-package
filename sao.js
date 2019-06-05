@@ -54,35 +54,11 @@ module.exports = {
         fs.rmdirSync(path)
       }
     }
-    let henrisPath = process.cwd()
-
-    if (isNewFolder) {
-      henrisPath = join(henrisPath, folderName)
-    }
-
-    henrisPath = join(henrisPath, 'henris')
-
-    deleteFolderRecursive(henrisPath)
+   
     gitInit()
-
     npmInstall()
 
-    const cd = () => {
-      if (isNewFolder) {
-        console.log(`    ${chalk.cyan('cd')} ${folderName}`)
-      }
-    }
-
     console.log()
-    console.log(chalk.bold(`  To get started:\n`))
-    cd()
-    console.log(`    npm run dev\n`)
-    console.log(chalk.bold(`  To build & start for production:\n`))
-    cd()
-    console.log(`    npm run staging`)
-    console.log(`    cd dist`)
-    console.log(`    npm i --production`)
-    console.log(`    ./node_modules/.bin/nuxt start`)
-    console.log()
-  }
+    console.log(chalk.bold(`  You are done! Happy developing.\n`))
+   }
 }
