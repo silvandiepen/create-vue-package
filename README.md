@@ -10,9 +10,21 @@ Create-vue-package sets up a publishable structure for Vue directives and compon
 
 ## Usage
 
+1. Go to a (parent) folder where you want to create your package.
+2. Run:
+
 ```bash
 npx create-vue-package
 ```
+
+
+3. Give your package a name, this name is also used for the main file.
+4. Add your name to it.
+5. Create it!
+6. It will automatically install dependencies.
+7. Go to the folder which you just created. 
+8. Your are done! All you need to do is write your code and publish it!
+
 
 ## Testing your package
 
