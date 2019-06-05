@@ -11,7 +11,7 @@ module.exports = {
       {
         name: 'package_description',
         message: 'Package description',
-        default: 'Vue Package',
+        default: 'My Vue Package',
         store: true
       },
       {
@@ -38,7 +38,7 @@ module.exports = {
     {
       type: 'move',
       patterns: {
-        '_gitignore': '.gitignore',
+        _gitignore: '.gitignore',
         '_eslintrc.js': '.eslintrc.js',
         '_package.json': 'package.json',
         'src/_index.jstemplate': 'src/index.js',
@@ -47,9 +47,18 @@ module.exports = {
     }
   ],
   async completed() {
+    this.fs.rename(
+      `${this._answers.package_name}/src/package.vue`,
+      `${this._answers.package_name}/src/${this._answers.package_name}.vue`,
+      function(err) {
+        if (err) console.log('ERROR: ' + err)
+      }
+    )
+
     this.gitInit()
     await this.npmInstall()
-    // console.log()
-    // console.log(chalk.bold(`  You are done! Happy developing.\n`))
+
+    console.log()
+    console.log(this.chalk.bold(`  You are done! Happy developing.\n`))
   }
 }
