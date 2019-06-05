@@ -2,9 +2,12 @@
   "name": "create-vue-package",
   "version": "0.0.2",
   "description": "Vue Component and Directive Packager",
-  "main": "dist/create-vue-package.cjs.js",
+  "main": "cli.js",
+  "bin": "cli.js",
   "files": [
-    "dist"
+    "cli.js",
+    "saofile.js",
+    "template/"
   ],
   "scripts": {
     "test:cov": "npm run lint && jest --coverage",
@@ -14,7 +17,6 @@
     "build": "bili",
     "try": "rm -rf test && node bin/cli.js test"
   },
-  "bin": "./bin/cli.js",
   "repository": {
     "url": "silvandiepen/create-vue-package",
     "type": "git"
