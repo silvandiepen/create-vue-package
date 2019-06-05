@@ -60,5 +60,10 @@ module.exports = {
 
     console.log()
     console.log(this.chalk.bold(`  You are done! Happy developing.\n`))
+    console.log()
+    console.log(`  Go to your project - cd ${this._answers.package_name}`);
+    console.log(`  Add your ${this._answers.package_type} to src/${this._answers.package_name}.vue`);
+    console.log(`  Run 'npm run build' and publish your package to npm!`)
+    
   }
 }

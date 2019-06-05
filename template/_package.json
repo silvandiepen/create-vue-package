@@ -11,9 +11,9 @@
   },
   "scripts": {
     "build": "npm run build:unpkg & npm run build:es & npm run build:umd",
-    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/sil-<%= package_name %>.umd.js",
-    "build:es": "rollup --config build/rollup.config.js --format es --file dist/sil-<%= package_name %>.esm.js",
-    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/sil-<%= package_name %>.min.js"
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/<%= package_name %>.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/<%= package_name %>.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/<%= package_name %>.min.js"
   },
   "dependencies": {},
   "devDependencies": {
