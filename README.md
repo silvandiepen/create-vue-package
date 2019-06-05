@@ -2,19 +2,12 @@
 
 [![NPM version](https://badgen.net/npm/v/create-vue-package)](https://npmjs.com/package/create-vue-package) [![NPM downloads](https://badgen.net/npm/dm/create-vue-package)](https://npmjs.com/package/create-vue-package) [![CircleCI](https://badgen.net/circleci/github/silvandiepen/create-vue-package/master)](https://circleci.com/gh/silvandiepen/create-vue-package/tree/master) [![codecov](https://codecov.io/gh/silvandiepen/create-vue-package/branch/master/graph/badge.svg)](https://codecov.io/gh/silvandiepen/create-vue-package)
 
-## Install
-
-```bash
-yarn add create-vue-package
-```
+Scaffold a complete package fast, to make Vue components and directives publishable
 
 ## Usage
 
-```js
-const createVuePackage = require('create-vue-package')
-
-createVuePackage()
-//=> foo
+```bash
+npx create-vue-package
 ```
 
 ## Contributing
