@@ -1,5 +1,5 @@
 module.exports = {
-  prompts() {
+  prompts () {
     return [
       {
         name: 'package_name',
@@ -46,11 +46,11 @@ module.exports = {
       }
     }
   ],
-  async completed() {
+  async completed () {
     this.fs.rename(
       `${this._answers.package_name}/src/package.vue`,
       `${this._answers.package_name}/src/${this._answers.package_name}.vue`,
-      function(err) {
+      function (err) {
         if (err) console.log('ERROR: ' + err)
       }
     )
@@ -61,9 +61,12 @@ module.exports = {
     console.log()
     console.log(this.chalk.bold(`  You are done! Happy developing.\n`))
     console.log()
-    console.log(`  Go to your project - cd ${this._answers.package_name}`);
-    console.log(`  Add your ${this._answers.package_type} to src/${this._answers.package_name}.vue`);
+    console.log(`  Go to your project - cd ${this._answers.package_name}`)
+    console.log(
+      `  Add your ${this._answers.package_type} to src/${
+        this._answers.package_name
+      }.vue`
+    )
     console.log(`  Run 'npm run build' and publish your package to npm!`)
-    
   }
 }
