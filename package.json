@@ -49,6 +49,7 @@
     "*.{json,md}": [
       "prettier --write",
       "git add"
-    ]
+    ], 
+    "ignore": ["template/**/*.js"]
   }
 }
