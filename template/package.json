@@ -1,0 +1,29 @@
+{
+  "name": "<%= name %>",
+  "description": "<%= description %>",
+  "author": "<%= author %>",
+  "version": "1.0.0",
+  "main": "dist/<%= name %>.umd.js",
+  "module": "dist/<%= name %>.esm.js",
+  "unpkg": "dist/<%= name %>.min.js",
+  "browser": {
+    "./sfc": "src/<%= name %>.vue"
+  },
+  "scripts": {
+    "build": "npm run build:unpkg & npm run build:es & npm run build:umd",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/sil-<%= name %>.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/sil-<%= name %>.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/sil-<%= name %>.min.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "minimist": "^1.2.0",
+    "rollup": "^0.57.1",
+    "rollup-plugin-buble": "^0.19.2",
+    "rollup-plugin-uglify-es": "0.0.1",
+    "rollup-plugin-vue": "^3.0.0",
+    "vue": "^2.5.16",
+    "vue-template-compiler": "^2.5.16"
+  },
+  "license": "ISC"
+}
