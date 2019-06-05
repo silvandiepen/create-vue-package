@@ -4,11 +4,34 @@
 
 Scaffold a complete package fast, to make Vue components and directives publishable
 
+## What it does
+
+Create-vue-package sets up a publishable structure for Vue directives and components. Using rollup to create the umd, esm and browser versions of your package. Just add your code in the generated Vue file in src and run ‘npm run build’.
+
 ## Usage
 
 ```bash
 npx create-vue-package
 ```
+
+## Testing your package
+
+Once you’ve published your package to npm you can install it in your project. Use it how you want to use it.
+When you want to update your package without all the time publishing it to npm you can “link” the package by..
+
+- In your package: ‘npm run link’
+- In your project: ‘npm run link [your package name]’
+
+When you update the code in your package, don’t forget to run ‘npm run build’ to generated the latest dist version.
+
+## Wishlist
+
+- Make it easier to scaffold scoped packages.
+- Check the package name for availability in the npm registry
+- Add generic tests for the generated components and directives.
+- Add tests for this generator
+- Create ability to add multiple components into on package.
+- Make it possible to setup more default structure for a type of component or directive.
 
 ## Contributing
 
@@ -23,4 +46,4 @@ npx create-vue-package
 **create-vue-package** © [Sil van Diepen](https://github.com/silvandiepen), Released under the [MIT](./LICENSE) License.<br>
 Authored and maintained by Sil van Diepen with help from contributors ([list](https://github.com/silvandiepen/create-vue-package/contributors)).
 
-> [github.com/silvandiepen](https://github.com/silvandiepen) · GitHub [@Sil van Diepen](https://github.com/silvandiepen) · Twitter [@silvandiepen](https://twitter.com/silvandiepen)
+[github.com/silvandiepen](https://github.com/silvandiepen) · GitHub [@Sil van Diepen](https://github.com/silvandiepen) · Twitter [@silvandiepen](https://twitter.com/silvandiepen)
