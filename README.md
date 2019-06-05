@@ -35,6 +35,8 @@ When you update the code in your package, don’t forget to run ‘npm run build
 
 ## Contributing
 
+Any help to make this package better is very welcome! So if you like this idea and have a good idea for refactor, update, write better docs or add features. Please feel free to contact me or just make a PR.
+
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
 3. Commit your changes: `git commit -am 'Add some feature'`
