@@ -14,6 +14,7 @@
     "build": "bili",
     "try": "rm -rf test && node bin/cli.js test"
   },
+  "bin": "./bin/cli.js",
   "repository": {
     "url": "silvandiepen/create-vue-package",
     "type": "git"
