@@ -1,6 +1,6 @@
 {
   "name": "create-vue-package",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Vue Component and Directive Packager",
   "main": "cli.js",
   "bin": "cli.js",
